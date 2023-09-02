@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'Quattro';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  overflow: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  overflow:hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*FONT STYLES*/
+
+@font-face {
+  font-family: 'Quattro';
+  src: local('Quattro'),
+ /* url('./fonts/QuattrocentoSans-Regular.ttf') format('truetype');*/
 }
 
-.App-link {
-  color: #61dafb;
+/*HEADER STYLES*/
+
+Navbar {
+  height: 20px;
+  border: 2px solid purple;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+Navbar-wrapper {
+  
 }
+/*CATALOGUE STYLES*/
+/*PRICING STYLES*/
+/*CREDIT STYLES*/
+/*CONTACT STYLES*/
+/*HEADER STYLES*/
