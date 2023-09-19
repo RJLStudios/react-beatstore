@@ -7,6 +7,7 @@
 
 html{
   overflow: auto;
+  
 }
 
 body{
@@ -18,20 +19,128 @@ body{
 @font-face {
   font-family: 'Quattro';
   src: local('Quattro'),
- /* url('./fonts/QuattrocentoSans-Regular.ttf') format('truetype');*/
+  url('./fonts/QuattrocentoSans-Regular.ttf') format('truetype');
 }
 
 /*HEADER STYLES*/
 
-Navbar {
-  height: 20px;
-  border: 2px solid purple;
+.Navbar {
+  height: 90px;
+ position: sticky;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 0px 50px;
+
 
 }
 
-Navbar-wrapper {
+.Navbar-wrapper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+
+
+.Logo {
+  font-size: 24px;
+  padding-right: 10px;
+  font-weight: 900;
+  }
+  
+  .Logo-label {
+    font-size: 13.3px;
+    display: flex;
+    gap: 12px;
+    list-style-type: none;
+    padding: 0px 12px;
+    letter-spacing: 3.5px;
+    font-weight: 600;
+  }
+
+ .Navbar-wrapper-right {
+margin-left: auto;
+
+  }
+
+.Header-links {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  justify-content: end;
   
 }
+
+.Catalogue {
+  padding: 0px 15px;
+}
+
+ .Pricing, .Credits, .Contact {
+  padding: 0px 15px;
+  border-left: 2px solid white;
+}
+
+
+/*HOMEPAGE STYLES*/
+.Homepage {
+  width: 100%;
+  color: white;
+}
+
+.Homepage-wrapper {
+  display: flex;
+  justify-content: center;
+height: 1000px;
+width: 100%;
+
+padding: 50px 0px;
+padding: 0px 22vw;
+text-align: start;
+}
+
+.Bio-wrapper{ 
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  text-align: start;
+  flex-direction: column;
+  padding-top:  100px;
+}
+
+.Bio-title {
+  max-width:5em;
+  font-size: 115px;
+  font-weight: 800;
+
+}
+
+.Bio-ul-wrapper{
+padding: 25px 0px 0px 25px ;
+font-size: 28px;
+
+}
+
+.Bio-ul {
+padding-left: 10px;
+}
+
+.li-item {
+  padding: 15px 10px 10px 0px ;
+}
+
+/*ICON BAR STYLES*/
+
+.Sticky-icons {
+border: 2px solid red;
+height: 300px;
+width: 120px;
+
+}
+
 /*CATALOGUE STYLES*/
 /*PRICING STYLES*/
 /*CREDIT STYLES*/
