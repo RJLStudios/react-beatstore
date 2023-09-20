@@ -135,11 +135,25 @@ padding-left: 10px;
 /*ICON BAR STYLES*/
 
 .Sticky-icons {
-border: 2px solid red;
-height: 300px;
-width: 120px;
-
+display: flex;
+justify-content: center;
+height: fit-content;
+width: 110px;
+z-index: 100;
+transform: translateY(-180%);
+position: fixed;
+right: 0;
+margin-right: 2vw;
+text-decoration: none;
 }
+
+
+.Soundcloud, .Twitter, .Youtube, .Spotify, .Instagram {
+  color: white;
+  list-style-type: none;
+  padding: 7px 0px 7px 0px;
+}
+
 
 /*CATALOGUE STYLES*/
 /*PRICING STYLES*/

@@ -1,5 +1,10 @@
 
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faSoundcloud, faSpotify } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+
 
 
 function App() {
@@ -37,12 +42,22 @@ function App() {
           <li className='li-item'>Simple licensing options</li>
           <li className='li-item'>Reach out to me for other enquiries/ quotes</li>
         </ul>
+
+    <div className='Sticky-icons'>
+      <ul class='Icon-ul'>
+        <a href='#'><li className='Soundcloud'><FontAwesomeIcon icon={faSoundcloud}/></li></a>
+        <a href='#'><li className='Spotify'><FontAwesomeIcon icon={faSpotify}/></li></a>
+        <a href='#'><li className='Twitter'><FontAwesomeIcon icon={ faTwitter}/></li></a>
+        <a href='#'><li className='Youtube'><FontAwesomeIcon icon={faYoutube}/></li></a>
+        <a href='#'><li className='Instagram'><FontAwesomeIcon icon={faInstagram}/></li></a>
+      </ul>
+    </div>
       </div>
+
       </div>
       </div>
     </div>
 
-    <div className='Sticky-icons'></div>
     </div>
 
    
