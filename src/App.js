@@ -104,42 +104,78 @@ function App() {
           <div className='Pricing-Grid'>
             <div className='Grid-Item'>
                 <div className='Card-Title'>
-                <div className='License-type'>BASIC LEASE</div>
+                <div className='License-type'>MP3 License</div>
+                <p className='From'>From </p>
                 <div className='Prices'>$29.95</div>
+                <div className="File-Type">Tagged MP3</div>
 
                 </div>
                
                 <div className='Card-Content Card-A'>
-                  <ul className=''>
-                    <li className=''></li>
+                  <ul className='License-li-A'>
+                    <li className=''>Non-Exclusive License</li>
+                    <li className=''>Distribution limit 10,000</li>
+                    <li className=''>1,000,000 Audio Streams</li>
+                    <li className=''>1 Music Video</li>
+                    <li className=''>Radio Play Rights</li>
                   </ul>
                 </div>
+
+                <div className='License-Btn-Div'>
+                  <button className="License-Btn">READ LICENSE</button>
+                </div>
               
             </div>
 
             <div className='Grid-Item'>
             <div className='Card-Title'>
-                <div className='License-type'>BASIC LEASE</div>
+                <div className='License-type'>Premium Lease</div>
+                <p className='From'>From </p>
                 <div className='Prices'>$49.95</div>
+                <div className="File-Type">Tagged MP3/WAV</div>
 
                 </div>
 
                 <div className='Card-Content Card-A'>
-                  <div className=''></div>
+                <ul className='License-li-A'>
+                    <li className=''>Non-Exclusive License</li>
+                    <li className=''>Distribution limit 10,000</li>
+                    <li className=''>1,000,000 Audio Streams</li>
+                    <li className=''>1 Music Video</li>
+                    <li className=''>Radio Play Rights</li>
+                  </ul>
                 </div>
+
+                <div className='License-Btn-Div'>
+                  <button className="License-Btn">READ LICENSE</button>
+                </div>
+              
               
             </div>
 
             <div className='Grid-Item'>
             <div className='Card-Title'>
-                <div className='License-type'>EXCLUSIVE LICENSE</div>
+                <div className='License-type'>Exclusive License</div>
+                <p className='From'>From </p>
                 <div className='Prices'>$149.95</div>
+                <div className="File-Type">Tagged MP3/WAV</div>
 
                 </div>
 
                 <div className='Card-Content Card-A'>
-                  <div className=''></div>
+                <ul className='License-li-A'>
+                    <li className=''>Non-Exclusive License</li>
+                    <li className=''>Distribution limit 10,000</li>
+                    <li className=''>1,000,000 Audio Streams</li>
+                    <li className=''>1 Music Video</li>
+                    <li className=''>Radio Play Rights</li>
+                  </ul>
                 </div>
+
+                <div className='License-Btn-Div'>
+                  <button className="License-Btn">READ LICENSE</button>
+                </div>
+              
               
             </div>
 
