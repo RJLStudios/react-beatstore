@@ -91,7 +91,7 @@ function App() {
           <div className="Title">BEAT STORE</div>
         </div>
         <div className="BeatStore-wrapper">
-          <div dangerouslySetInnerHTML={{ __html: BeatstoreHTML }} />
+          <div className='BeatStore' dangerouslySetInnerHTML={{ __html: BeatstoreHTML }} />
         </div>
       </div>
 
@@ -103,92 +103,162 @@ function App() {
         <div className='Pricing-plan'>
           <div className='Pricing-Grid'>
             <div className='Grid-Item'>
-                <div className='Card-Title'>
+              <div className='Card-Title'>
                 <div className='License-type'>MP3 License</div>
                 <p className='From'>From </p>
                 <div className='Prices'>$29.95</div>
                 <div className="File-Type">Tagged MP3</div>
 
-                </div>
-               
-                <div className='Card-Content Card-A'>
-                  <ul className='License-li-A'>
-                    <li className=''>Non-Exclusive License</li>
-                    <li className=''>Distribution limit 10,000</li>
-                    <li className=''>1,000,000 Audio Streams</li>
-                    <li className=''>1 Music Video</li>
-                    <li className=''>Radio Play Rights</li>
-                  </ul>
-                </div>
+              </div>
 
-                <div className='License-Btn-Div'>
-                  <button className="License-Btn">READ LICENSE</button>
-                </div>
-              
+              <div className='Card-Content Card-A'>
+                <ul className='License-li-A'>
+                  <li className=''>Non-Exclusive License</li>
+                  <li className=''>Distribution limit 10,000</li>
+                  <li className=''>1,000,000 Audio Streams</li>
+                  <li className=''>1 Music Video</li>
+                  <li className=''>Radio Play Rights</li>
+                </ul>
+              </div>
+
+              <div className='License-Btn-Div'>
+                <button className="License-Btn">READ LICENSE</button>
+              </div>
+
             </div>
 
             <div className='Grid-Item'>
-            <div className='Card-Title'>
+              <div className='Card-Title'>
                 <div className='License-type'>Premium Lease</div>
                 <p className='From'>From </p>
                 <div className='Prices'>$49.95</div>
                 <div className="File-Type">Tagged MP3/WAV</div>
 
-                </div>
+              </div>
 
-                <div className='Card-Content Card-A'>
+              <div className='Card-Content Card-A'>
                 <ul className='License-li-A'>
-                    <li className=''>Non-Exclusive License</li>
-                    <li className=''>Distribution limit 10,000</li>
-                    <li className=''>1,000,000 Audio Streams</li>
-                    <li className=''>1 Music Video</li>
-                    <li className=''>Radio Play Rights</li>
-                  </ul>
-                </div>
+                  <li className=''>Non-Exclusive License</li>
+                  <li className=''>Distribution limit 10,000</li>
+                  <li className=''>1,000,000 Audio Streams</li>
+                  <li className=''>1 Music Video</li>
+                  <li className=''>Radio Play Rights</li>
+                </ul>
+              </div>
 
-                <div className='License-Btn-Div'>
-                  <button className="License-Btn">READ LICENSE</button>
-                </div>
-              
-              
+              <div className='License-Btn-Div'>
+                <button className="License-Btn">READ LICENSE</button>
+              </div>
+
+
             </div>
 
             <div className='Grid-Item'>
-            <div className='Card-Title'>
+              <div className='Card-Title'>
                 <div className='License-type'>Exclusive License</div>
                 <p className='From'>From </p>
                 <div className='Prices'>$149.95</div>
                 <div className="File-Type">Tagged MP3/WAV</div>
 
-                </div>
+              </div>
 
-                <div className='Card-Content Card-A'>
+              <div className='Card-Content Card-A'>
                 <ul className='License-li-A'>
-                    <li className=''>Non-Exclusive License</li>
-                    <li className=''>Distribution limit 10,000</li>
-                    <li className=''>1,000,000 Audio Streams</li>
-                    <li className=''>1 Music Video</li>
-                    <li className=''>Radio Play Rights</li>
-                  </ul>
-                </div>
+                  <li className=''>Non-Exclusive License</li>
+                  <li className=''>Distribution limit 10,000</li>
+                  <li className=''>1,000,000 Audio Streams</li>
+                  <li className=''>1 Music Video</li>
+                  <li className=''>Radio Play Rights</li>
+                </ul>
+              </div>
 
-                <div className='License-Btn-Div'>
-                  <button className="License-Btn">READ LICENSE</button>
-                </div>
-              
-              
+              <div className='License-Btn-Div'>
+                <button className="License-Btn">READ LICENSE</button>
+              </div>
+
+
             </div>
 
-       
+
           </div>
-        
+
         </div>
       </div>
 
       <div className="Credits"></div>
-      <div className="Contact"></div>
+
+
+      <div className="Contact-Div">
+        <div className='CTO-Wrapper'>
+          <div className='CTO-box-left-wrapper'>
+            <div className='CTO-box-left'>
+              <div className='CTO-Title'> Got exclusives?
+              </div>
+              <div className='CTO-Para'> Have a question about exclusive licensing, bookings or just want to say hi?
+              </div>
+              <form id='contact-form' /*onsubmit={this.handleSubmit.bind(this)} method="POST"*/>
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input type="text" className="form-control" placeholder="Enter your name" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="exampleInputEmail1">Email address</label>
+                  <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter your email"/>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message">Message</label>
+                  <textarea className="form-control" rows="5" placeholder="Enter your email"></textarea>
+                </div>
+                <button type="submit" className="btn btn-primary">SUBMIT</button>
+              </form>
+            </div>
+          </div>
+
+          <div
+            className='CTO-box-right-wrapper'
+            style={{
+              backgroundImage: `url('https://i.pinimg.com/originals/73/f1/c3/73f1c31a01dbbf150207c2268fb9a702.jpg')`,
+            }}
+          >
+          </div>
+
+        </div>
+      </div>
+
+      <div className="Footer">
+        <div className='Footer-Title Logo'>PRODLUNA</div>
+        <div className='Footer-bio'></div>
+        <div className='Footer-icons'>
+        <ul class="Icon-ul-footer">
+                  <a href="# ">
+                    <li className="Soundcloud Circle">
+                      <FontAwesomeIcon icon={faSoundcloud} />
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li className="Spotify Circle">
+                      <FontAwesomeIcon icon={faSpotify} />
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li className="Twitter Circle">
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li className="Youtube Circle">
+                      <FontAwesomeIcon icon={faYoutube} />
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li className="Instagram Circle">
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </li>
+                  </a>
+                </ul>
+        </div>
+        <div className='Footer-Copyright'>© PRODLUNA 2020-2024 </div>
+      </div>
     </div>
   );
 }
-
-export default App;
