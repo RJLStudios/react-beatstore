@@ -1,4 +1,5 @@
 import "./App.css";
+import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -8,13 +9,38 @@ import {
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import DOMPurify from "dompurify";
+import { BrowserRouter } from "react-router-dom";
+import {Hashlink as Link} from 'react-router-hash-link'
 
 const BeatstoreHTML = `<iframe src="https://player.beatstars.com/?storeId=142410" width="100%" height="800" style="min-width:1024px;"> -- none -- </iframe>`;
 /*const safeBeatstoreHTML = DOMPurify.sanitize(BeatstoreHTML);*/
 
 function App() {
+
+  const catalogRef = useRef(null);
+  const pricingRef = useRef(null);
+  const ctoRef = useRef(null);
+
+  function scrollToComponent(ref) {
+    if (ref.current) {
+      ref.current.scrollIntoView ({ behaviour : 'smooth'})
+    }
+  }
+  const catalogScrollToComponent = () => {
+    scrollToComponent(catalogRef);
+  }
+
+  const pricingScrollToComponent = () => {
+    scrollToComponent(pricingRef);
+  }
+
+  const ctoScrollToComponent = () => {
+    scrollToComponent(ctoRef);
+  }
+
+
   return (
-    <div className="App">
+    <div className="App" >
       <div
         className="Homepage"
         style={{
@@ -31,12 +57,14 @@ function App() {
           </div>
 
           <div className="Navbar-wrapper-right">
+            <div className='Nav-links'>
             <ul className="Header-links">
-              <li className="Catalogue">Beat Catalogue</li>
-              <li className="Pricing">Pricing</li>
+              <li className="Catalogue" onClick={catalogScrollToComponent}>Beat Catalogue</li>
+              <li className="Pricing" onClick={pricingScrollToComponent}>Pricing</li>
               <li className="Credits">Credits</li>
-              <li className="Contact">Contact</li>
+              <li className="Contact" onClick={ctoScrollToComponent}>Contact</li>
             </ul>
+            </div>
           </div>
         </div>
 
@@ -86,7 +114,7 @@ function App() {
         </div>
       </div>
 
-      <div className="Beat-Catalogue">
+      <div className="Beat-Catalogue" ref={catalogRef}>
         <div className="Catalogue-title">
           <div className="Title">BEAT STORE</div>
         </div>
@@ -95,7 +123,7 @@ function App() {
         </div>
       </div>
 
-      <div className="Pricing-div">
+      <div className="Pricing-div" ref={pricingRef}>
         <div className="Catalogue-title">
           <div className="Title">PRICING</div>
         </div>
@@ -188,7 +216,7 @@ function App() {
       <div className="Credits"></div>
 
 
-      <div className="Contact-Div">
+      <div className="Contact-Div"  ref={ctoRef}>
         <div className='CTO-Wrapper'>
           <div className='CTO-box-left-wrapper'>
             <div className='CTO-box-left'>
@@ -261,4 +289,4 @@ function App() {
       </div>
     </div>
   );
-}
+} export default App;
