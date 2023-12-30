@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/beatstore/static/css/main.4ce90fdb.css",
-    "main.js": "/beatstore/static/js/main.1dfc71f9.js",
-    "static/media/QuattrocentoSans-Regular.ttf": "/beatstore/static/media/QuattrocentoSans-Regular.5293b4c9e114a999cd53.ttf",
-    "index.html": "/beatstore/index.html",
-    "main.4ce90fdb.css.map": "/beatstore/static/css/main.4ce90fdb.css.map",
-    "main.1dfc71f9.js.map": "/beatstore/static/js/main.1dfc71f9.js.map"
+    "main.css": "/react-beatstore/static/css/main.35823a03.css",
+    "main.js": "/react-beatstore/static/js/main.1dfc71f9.js",
+    "static/media/QuattrocentoSans-Regular.ttf": "/react-beatstore/static/media/QuattrocentoSans-Regular.5293b4c9e114a999cd53.ttf",
+    "index.html": "/react-beatstore/index.html",
+    "main.35823a03.css.map": "/react-beatstore/static/css/main.35823a03.css.map",
+    "main.1dfc71f9.js.map": "/react-beatstore/static/js/main.1dfc71f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ce90fdb.css",
+    "static/css/main.35823a03.css",
     "static/js/main.1dfc71f9.js"
   ]
 }
