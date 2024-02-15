@@ -143,7 +143,7 @@ window.addEventListener('scroll', changeOpacity)
           <div className='Pricing-Grid'>
             <div className='Grid-Item'>
               <div className='Card-Title'>
-                <div className='License-type'>MP3 License</div>
+                <div className='License-type'>Basic Lease</div>
                 <p className='From'>From </p>
                 <div className='Prices'>$29.95</div>
                 <div className="File-Type">Tagged MP3</div>
