@@ -1,5 +1,6 @@
 import "./App.css";
 import { useRef } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -11,11 +12,25 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import DOMPurify from "dompurify";
 import { BrowserRouter } from "react-router-dom";
 import {Hashlink as Link} from 'react-router-hash-link'
+import Bussy from './Images/Bussy.jpg';
 
 const BeatstoreHTML = `<iframe src="https://player.beatstars.com/?storeId=142410" width="100%" height="800" style="min-width:1024px;"> -- none -- </iframe>`;
 /*const safeBeatstoreHTML = DOMPurify.sanitize(BeatstoreHTML);*/
 
 function App() {
+
+// change nav colour on scroll 
+
+const [opacity, setOpacity] = useState(false)
+const changeOpacity = () => {
+  if (window.scrollY >= 90) {
+    setOpacity(true)
+  } else {
+    setOpacity(false)
+  }
+}
+
+window.addEventListener('scroll', changeOpacity)
 
   const catalogRef = useRef(null);
   const pricingRef = useRef(null);
@@ -44,10 +59,11 @@ function App() {
       <div
         className="Homepage"
         style={{
-          backgroundImage: `url('https://i.pinimg.com/564x/6e/2a/d8/6e2ad8a3aeebf3741aa5b3cf1fdb0b90.jpg')`,
+          backgroundImage: `url(${Bussy})`,
+          
         }}
       >
-        <div className="Navbar" /*ref={homeRef}*/>
+        <div className={opacity ? 'Navbar Navbar-bg' : 'Navbar'} /*ref={homeRef}*/>
           <div className="Navbar-wrapper">
             <h3 className="Logo">PRODLUNA</h3>
             <ul className="Logo-label">
@@ -72,13 +88,8 @@ function App() {
           <div className="Bio-wrapper">
             <div className="Bio-title">YOUR NEXT HIT STARTS HERE</div>
             <div className="Bio-ul-wrapper">
-              <ul className="Bio-ul">
-                <li className="li-item">All beats are original</li>
-                <li className="li-item">Simple licensing options</li>
-                <li className="li-item">
-                  Reach out to me for other enquiries/ quotes
-                </li>
-              </ul>
+              <button className='Homepage-CTO-Btn'>GET IN CONTACT</button>
+            </div>
 
               <div className="Sticky-icons">
                 <ul class="Icon-ul">
@@ -109,7 +120,7 @@ function App() {
                   </a>
                 </ul>
               </div>
-            </div>
+            
           </div>
         </div>
       </div>
