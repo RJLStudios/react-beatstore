@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-beatstore/static/css/main.faab4892.css",
-    "main.js": "/react-beatstore/static/js/main.fee3753a.js",
+    "main.css": "/react-beatstore/static/css/main.e0c4ecee.css",
+    "main.js": "/react-beatstore/static/js/main.84e39fbd.js",
     "static/media/Bussy.jpg": "/react-beatstore/static/media/Bussy.d1f9245d4c4cfa608ba2.jpg",
     "static/media/QUATTROCENTOSANS-BOLD.TTF": "/react-beatstore/static/media/QUATTROCENTOSANS-BOLD.7b057d60a5d6d316ce3b.TTF",
     "static/media/QuattrocentoSans-Regular.ttf": "/react-beatstore/static/media/QuattrocentoSans-Regular.5293b4c9e114a999cd53.ttf",
     "index.html": "/react-beatstore/index.html",
-    "main.faab4892.css.map": "/react-beatstore/static/css/main.faab4892.css.map",
-    "main.fee3753a.js.map": "/react-beatstore/static/js/main.fee3753a.js.map"
+    "main.e0c4ecee.css.map": "/react-beatstore/static/css/main.e0c4ecee.css.map",
+    "main.84e39fbd.js.map": "/react-beatstore/static/js/main.84e39fbd.js.map"
   },
   "entrypoints": [
-    "static/css/main.faab4892.css",
-    "static/js/main.fee3753a.js"
+    "static/css/main.e0c4ecee.css",
+    "static/js/main.84e39fbd.js"
   ]
 }
