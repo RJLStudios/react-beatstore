@@ -31,7 +31,7 @@ body{
 /*HEADER STYLES*/
 
 .Navbar {
-  height: 75px;
+  height: 60px;
  position: fixed;
  top: 0;
  display: flex;
@@ -40,6 +40,7 @@ body{
  color: white;
  padding: 0px 50px;
  transition: 400ms;
+ flex-direction: column;
 }
 
 .Navbar-bg {
@@ -49,10 +50,12 @@ body{
 }
 
 .Navbar-wrapper {
-  height: 50px;
+  height: 100%;
   display: flex;
   align-items: center;
   padding: 0px;
+  flex-direction: row;
+  width: 100%;
 }
 
 
@@ -83,8 +86,6 @@ margin-left: auto;
   align-items: center;
   list-style-type: none;
   justify-content: end;
-
-  
 }
 
 .Catalogue {
@@ -94,6 +95,16 @@ margin-left: auto;
  .Pricing, .Credits, .Contact {
   padding: 0px 15px;
   border-left: 2px solid white;
+}
+
+.Progress-container {
+width: 100vw;
+height: 1px;
+}
+
+.Progress-fill {
+height: 100%;
+border: 1px solid red;
 }
 
 
@@ -162,6 +173,7 @@ background-color: black;
 color: white;
 transition: 400ms;
 cursor: pointer;
+border: 1px solid red;
 }
 
 .li-item {
@@ -171,18 +183,19 @@ cursor: pointer;
 
 /*ICON BAR STYLES*/
 
-.Sticky-icons {
+.Sticky-icon {
 border-radius: 10px;
 display: flex;
 justify-content: center;
 height: fit-content;
 width: 90px;
 z-index: 100;
-transform: translateY(-250%);
-position: fixed;
 right: 0;
+transform: translateY(-300%);
+position: fixed;
 margin-right: 0.25vw;
 text-decoration: none;
+border: 1px solid green;
 }
 
 
@@ -253,12 +266,18 @@ text-decoration: none;
 .Pricing-Grid {
 width: 100%;
 display: flex;
-height: 92%;
-padding: 2rem 0rem;
+height: 100%;
+padding: 1rem 0rem;
 align-content: center;
 justify-content: center;
 grid-gap: 5em;
 
+}
+
+.File-Type {
+  width: 80%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
 }
 
 .Grid-Item {
@@ -266,7 +285,9 @@ color: black;
 width: 270px;
 border-radius: 4px;
 background-color: white;
-height: 100%;
+height: 400px;
+
+padding-top: 15px;
 }
 
 .Card-Title {
@@ -285,12 +306,13 @@ margin: 0px 20px;
   justify-content: center;
   width: 100%;
   height: 55%;
+  padding-top: 20px;
 }
 
 .License-type {
 font-size: 14px;
 padding: 2px;
-margin: 5px 0px;
+margin: 25px 0px 5px 0px;
 background-color: lightgrey;
 border-radius: 2px;
 }
@@ -312,7 +334,6 @@ padding: 20px 0px 20px 0px;
 gap: 5px;
 font-size: 16px;
 margin: 0px 40px;
-border-top: 1px solid lightgray;
 }
 
 .License-Btn-Div {
@@ -348,7 +369,7 @@ color: black;
 .Contact-Div {
   display: flex;
   justify-content: center;
-height: 750px;
+height: 620px;
 width: 100%;
 text-align: start;
 }
@@ -440,7 +461,7 @@ padding: 10px 0;
 .Footer {
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 150px;
   background-color: #282d32;
   text-align: center;
   justify-content: space-between;
@@ -453,13 +474,6 @@ text-align: center;
 padding: 18px 0px;
 }
 
-.Footer-bio {
-
-}
-
-.Footer-Icons {
-
-}
 
 .Icon-ul-footer{
   display: flex;
@@ -479,8 +493,6 @@ padding: 10px;
 font-weight: 400;
 font-size: 18px;
 }
-
-
 
 .Footer-Copyright {
   display: flex;
@@ -509,14 +521,6 @@ li:hover{
     font-weight: 900;
     }
   
-  .Logo-label {
-    visibility: hidden;
-  }
-
-  .Sticky-icons {
-visibility: none;
-    }
-    
 
   .BeatStore {
     width: 100%;

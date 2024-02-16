@@ -1,6 +1,7 @@
 import "./App.css";
 import { useRef } from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -18,6 +19,28 @@ const BeatstoreHTML = `<iframe src="https://player.beatstars.com/?storeId=142410
 /*const safeBeatstoreHTML = DOMPurify.sanitize(BeatstoreHTML);*/
 
 function App() {
+// scroll progress bar function 
+const [scrollPercentage, setScrollPercentage] = useState(0);
+
+useEffect(()=>{
+
+  const handleScroll = () => {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollY = window.scrollY;
+  
+    const scrollPercent = (scrollY / (documentHeight - windowHeight))*100;
+  
+    setScrollPercentage(scrollPercent)
+    console.log(scrollPercent);
+  }
+
+  window.addEventListener('scroll', handleScroll);
+
+  return()=>{
+    window.removeEventListener('scroll', handleScroll)
+  }
+},[]);
 
 // change nav colour on scroll 
 
@@ -70,9 +93,8 @@ window.addEventListener('scroll', changeOpacity)
               <li className="Producer-label">PRODUCER</li>
               <li className="Musician-label">MUSICIAN</li>
             </ul>
-          </div>
 
-          <div className="Navbar-wrapper-right">
+            <div className="Navbar-wrapper-right">
             <div className='Nav-links'>
             <ul className="Header-links">
               <li className="Catalogue" onClick={catalogScrollToComponent}>Beat Catalogue</li>
@@ -81,6 +103,13 @@ window.addEventListener('scroll', changeOpacity)
               <li className="Contact" onClick={ctoScrollToComponent}>Contact</li>
             </ul>
             </div>
+             </div>
+          </div>
+
+          <div className='Progress-container'>
+          <div className='Progress-fill'
+               style={{width: `${scrollPercentage}%`}}
+          ></div>
           </div>
         </div>
 
@@ -91,7 +120,7 @@ window.addEventListener('scroll', changeOpacity)
               <button className='Homepage-CTO-Btn'>GET IN CONTACT</button>
             </div>
 
-              <div className="Sticky-icons">
+              <div className="Sticky-icon">
                 <ul class="Icon-ul">
                   <a href="#">
                     <li className="Soundcloud">
