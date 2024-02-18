@@ -7,6 +7,7 @@ import {
   faInstagram,
   faSoundcloud,
   faSpotify,
+  faBars,
 } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
@@ -158,7 +159,7 @@ window.addEventListener('scroll', changeOpacity)
         <div className="Catalogue-title">
           <div className="Title">BEAT STORE</div>
         </div>
-        <div className="BeatStore-wrapper">
+        <div className="BeatStore-wrapper" style={{width: '100vw'}}>
           <div className='BeatStore' dangerouslySetInnerHTML={{ __html: BeatstoreHTML }} />
         </div>
       </div>

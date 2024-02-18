@@ -31,7 +31,7 @@ body{
 /*HEADER STYLES*/
 
 .Navbar {
-  height: 60px;
+  height: 3.5em;
  position: fixed;
  top: 0;
  display: flex;
@@ -58,9 +58,8 @@ body{
   width: 100%;
 }
 
-
 .Logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   padding-right: 10px;
   font-weight: 900;
   }
@@ -106,7 +105,6 @@ height: 1px;
 height: 100%;
 border: 1px solid red;
 }
-
 
 /*HOMEPAGE STYLES*/
 .Homepage {
@@ -204,6 +202,7 @@ border: 1px solid green;
   list-style-type: none;
   padding: 7px 0px 7px 0px;
   font-size: 25px;
+  border: 2px solid orange;
 }
 
 
@@ -225,7 +224,6 @@ border: 1px solid green;
   width: 100%;
   color: white;
   font-family: 'Quattro-Bold';
-
 }
 
 .Title {
@@ -238,11 +236,12 @@ border: 1px solid green;
 .BeatStore-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
+
 }
 
 #BeatstoreHTML{
-  border: 3px solid green;
+ 
 }
 
 
@@ -391,7 +390,7 @@ text-align: start;
   justify-content: center;
   flex-direction: column;
   border: 3px solid black;
-  width: 800px ;
+  width: 800px;
   height: 100% auto;
   margin: 20px;
   letter-spacing: 0.5px;
@@ -513,44 +512,53 @@ li:hover{
 
 /*RESPONSIVENESS STYLES*/
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:800px) {
 
-  .Logo {
-    font-size: 22px;
-    padding: 0;
-    font-weight: 900;
-    }
-  
+  .Homepage-wrapper, .Pricing-Grid {
+    display: flex;
+  }
 
-  .BeatStore {
+.Pricing-Grid {
+display: flex;
+flex-direction: column;
+margin: 0 40px;
+}
+
+.Bio-title {
+font-size: 2em;
+}
+
+.Bio-wrapper {
+flex-direction: column;
+display: flex;
+}
+
+  .Bio-title {
+width: 100%;
+padding-bottom: 15px;
+  }
+
+  .Bio-ul-wrapper{
     width: 100%;
   }
 
-  .BeatStore-wrapper{
-   display: flex;
-   width: 100vw;
-   margin: 0px 2em;
-   border: 2px solid green;
-
-  }
-
+.Contact-Div {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
-@media screen and (max-width:1300px) {
+.CTO-box-left-wrapper {
+  width: 100%;
+}
 
-  .Sticky-icons {
-    display: flex;
-    justify-content: center;
-    height: fit-content;
-    width: 110px;
-    z-index: 100;
-    transform: translateY(-330%);
-    position: fixed;
-    right: 0;
-    margin-right: 0.25vw;
-    text-decoration: none;
-   
-    }
-    
+.Navbar{
+  padding: 0em 1.5em;
+}
+
+.Logo-label, .Nav-links {
+visibility: hidden;
+border: 2px solid orange;
+}
 
 }
