@@ -236,12 +236,7 @@ border: 1px solid green;
 .BeatStore-wrapper {
   display: flex;
   justify-content: center;
-  width: 100vw;
-
-}
-
-#BeatstoreHTML{
- 
+  width: 70%;
 }
 
 
@@ -521,7 +516,14 @@ li:hover{
 .Pricing-Grid {
 display: flex;
 flex-direction: column;
-margin: 0 40px;
+justify-content: center;
+}
+
+.Pricing-plan {
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+
 }
 
 .Bio-title {

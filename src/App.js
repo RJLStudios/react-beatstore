@@ -16,7 +16,7 @@ import { BrowserRouter } from "react-router-dom";
 import {Hashlink as Link} from 'react-router-hash-link'
 import Bussy from './Images/Bussy.jpg';
 
-const BeatstoreHTML = `<iframe src="https://player.beatstars.com/?storeId=142410" width="100%" height="800" style="min-width:1024px;"> -- none -- </iframe>`;
+const BeatstoreHTML = `<iframe src="https://player.beatstars.com/?storeId=142410" width="100%" height="800" style="min-width:400px margin: 0 auto;"> -- none -- </iframe>`;
 /*const safeBeatstoreHTML = DOMPurify.sanitize(BeatstoreHTML);*/
 
 function App() {
@@ -159,8 +159,8 @@ window.addEventListener('scroll', changeOpacity)
         <div className="Catalogue-title">
           <div className="Title">BEAT STORE</div>
         </div>
-        <div className="BeatStore-wrapper" style={{width: '100vw'}}>
-          <div className='BeatStore' dangerouslySetInnerHTML={{ __html: BeatstoreHTML }} />
+        <div className="BeatStore-wrapper" >
+          <div className='BeatStore' style={{ width: '100%'}} dangerouslySetInnerHTML={{ __html: BeatstoreHTML }} />
         </div>
       </div>
 
