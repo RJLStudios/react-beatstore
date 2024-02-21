@@ -558,9 +558,19 @@ padding-bottom: 15px;
   padding: 0em 1.5em;
 }
 
+
+
 .Logo-label, .Nav-links {
 visibility: hidden;
 border: 2px solid orange;
+}
+
+.Burger-menu {
+  border: 2px solid green;
+}
+
+.Menu-icon {
+  color: white;
 }
 
 }

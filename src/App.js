@@ -7,7 +7,8 @@ import {
   faInstagram,
   faSoundcloud,
   faSpotify,
-  faBars,
+  faCoffee,
+  faAirbnb,
 } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
@@ -20,6 +21,9 @@ const BeatstoreHTML = `<iframe src="https://player.beatstars.com/?storeId=142410
 /*const safeBeatstoreHTML = DOMPurify.sanitize(BeatstoreHTML);*/
 
 function App() {
+
+// burger icon on smaller devices 
+
 // scroll progress bar function 
 const [scrollPercentage, setScrollPercentage] = useState(0);
 
@@ -77,8 +81,31 @@ window.addEventListener('scroll', changeOpacity)
     scrollToComponent(ctoRef);
   }
 
+  const BurgerMenu = () => {
+    const [menuIcon, setMenuIcon] = useState(false);
+    
+    useEffect(() => {
+    const HandleResize = () => {
+      if (window.innerWidth < 800) {
+        setMenuIcon(true)
+        document.getElementById('Homepage').style.border = '1px solid green;'
+      } else {
+        setMenuIcon(false)
+      }
+    };
+  
+    HandleResize();
+    window.addEventListener('resize', HandleResize);
+  
+    return () => {
+      window.removeEventListener('resize', HandleResize);
+    };
+  
+  }, []);
+  
+}
 
-  return (
+return (
     <div className="App" >
       <div
         className="Homepage"
@@ -96,14 +123,20 @@ window.addEventListener('scroll', changeOpacity)
             </ul>
 
             <div className="Navbar-wrapper-right">
-            <div className='Nav-links'>
-            <ul className="Header-links">
-              <li className="Catalogue" onClick={catalogScrollToComponent}>Beat Catalogue</li>
-              <li className="Pricing" onClick={pricingScrollToComponent}>Pricing</li>
-              <li className="Credits">Credits</li>
-              <li className="Contact" onClick={ctoScrollToComponent}>Contact</li>
-            </ul>
-            </div>
+              {BurgerMenu ? (
+                  <div className='Burger-menu'>
+                 <FontAwesomeIcon classname='Menu-icon' icon={faAirbnb} />
+                  </div>
+              ) : (
+                <div className='Nav-links'>
+                <ul className="Header-links">
+                  <li className="Catalogue" onClick={catalogScrollToComponent}>Beat Catalogue</li>
+                  <li className="Pricing" onClick={pricingScrollToComponent}>Pricing</li>
+                  <li className="Credits">Credits</li>
+                  <li className="Contact" onClick={ctoScrollToComponent}>Contact</li>
+                </ul>
+                </div>
+              )}   
              </div>
           </div>
 
