@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
+/*import {
   faInstagram,
   faSoundcloud,
   faSpotify,
@@ -11,7 +11,8 @@ import {
   faAirbnb,
 } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";*/
+import { FaInstagram, FaSoundcloud, FaSpotify, FaTwitter, FaYoutube } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa";
 import DOMPurify from "dompurify";
 import { BrowserRouter } from "react-router-dom";
@@ -147,31 +148,31 @@ window.addEventListener('scroll', changeOpacity)
               <button className='Homepage-CTO-Btn'>GET IN CONTACT</button>
             </div>
 
-              <div className="Sticky-icon">
+              <div className="Sticky-icons">
                 <ul class="Icon-ul">
                   <a href="#">
                     <li className="Soundcloud">
-                      <FontAwesomeIcon icon={faSoundcloud} />
+                    <FaSoundcloud />
                     </li>
                   </a>
                   <a href="#">
                     <li className="Spotify">
-                      <FontAwesomeIcon icon={faSpotify} />
+                      <FaSpotify />
                     </li>
                   </a>
                   <a href="#">
                     <li className="Twitter">
-                      <FontAwesomeIcon icon={faTwitter} />
+                    <FaTwitter />
                     </li>
                   </a>
                   <a href="#">
                     <li className="Youtube">
-                      <FontAwesomeIcon icon={faYoutube} />
+                      <FaYoutube />
                     </li>
                   </a>
                   <a href="#">
                     <li className="Instagram">
-                      <FontAwesomeIcon icon={faInstagram} />
+                      <FaInstagram />
                     </li>
                   </a>
                 </ul>
@@ -327,27 +328,27 @@ window.addEventListener('scroll', changeOpacity)
         <ul class="Icon-ul-footer">
                   <a href="# ">
                     <li className="Soundcloud Circle">
-                      <FontAwesomeIcon icon={faSoundcloud} />
+                    <FaSoundcloud />
                     </li>
                   </a>
                   <a href="#">
                     <li className="Spotify Circle">
-                      <FontAwesomeIcon icon={faSpotify} />
+                      <FaSpotify/>
                     </li>
                   </a>
                   <a href="#">
                     <li className="Twitter Circle">
-                      <FontAwesomeIcon icon={faTwitter} />
+                    <FaTwitter/>
                     </li>
                   </a>
                   <a href="#">
                     <li className="Youtube Circle">
-                      <FontAwesomeIcon icon={faYoutube} />
+                    <FaYoutube/>
                     </li>
                   </a>
                   <a href="#">
                     <li className="Instagram Circle">
-                      <FontAwesomeIcon icon={faInstagram} />
+                    <FaInstagram/>
                     </li>
                   </a>
                 </ul>

@@ -114,6 +114,10 @@ border: 1px solid red;
   color: white;
 }
 
+.Menu-icon:hover {
+  cursor: pointer;
+}
+
 
 
 /*HOMEPAGE STYLES*/
@@ -191,7 +195,7 @@ border: 1px solid red;
 
 /*ICON BAR STYLES*/
 
-.Sticky-icon {
+/*.Sticky-icon {
 border-radius: 10px;
 display: flex;
 justify-content: center;
@@ -204,15 +208,23 @@ position: fixed;
 margin-right: 0.25vw;
 text-decoration: none;
 border: 1px solid green;
+}*/
+
+.Sticky-icons {
+  width: fit-content;
+  padding: 0px 10px;
+  position: fixed;
+  right: 0;
+  top: 35vh;
+  margin-right: 10px;
 }
 
 
 .Soundcloud, .Twitter, .Youtube, .Spotify, .Instagram {
   color: white;
   list-style-type: none;
-  padding: 7px 0px 7px 0px;
-  font-size: 25px;
-  border: 2px solid orange;
+  padding: 4px 0px 7px 0px;
+  font-size: 20px;
 }
 
 
@@ -569,7 +581,6 @@ padding-bottom: 15px;
 }
 
 
-
 .Logo-label, .Nav-links {
 visibility: hidden;
 border: 2px solid orange;
@@ -580,8 +591,9 @@ border: 2px solid orange;
   font-size: 18px;
 }
 
-
-
+.Sticky-icons {
+visibility: hidden;
+}
 
 }
 
