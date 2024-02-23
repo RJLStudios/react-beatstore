@@ -58,6 +58,10 @@ body{
   width: 100%;
 }
 
+.Nav-links, .Header-links {
+  visibility: visible;
+}
+
 .Logo {
   font-size: 1.5rem;
   padding-right: 10px;
@@ -105,6 +109,12 @@ height: 1px;
 height: 100%;
 border: 1px solid red;
 }
+
+.Menu-icon {
+  color: white;
+}
+
+
 
 /*HOMEPAGE STYLES*/
 .Homepage {
@@ -507,7 +517,7 @@ li:hover{
 
 /*RESPONSIVENESS STYLES*/
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
 
   .Homepage-wrapper, .Pricing-Grid {
     display: flex;
@@ -565,12 +575,13 @@ visibility: hidden;
 border: 2px solid orange;
 }
 
-.Burger-menu {
-  border: 2px solid green;
-}
-
-.Menu-icon {
+.Header-link {
   color: white;
+  font-size: 18px;
 }
 
+
+
+
 }
+

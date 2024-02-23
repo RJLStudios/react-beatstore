@@ -12,10 +12,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { FaBars } from "react-icons/fa";
 import DOMPurify from "dompurify";
 import { BrowserRouter } from "react-router-dom";
 import {Hashlink as Link} from 'react-router-hash-link'
 import Bussy from './Images/Bussy.jpg';
+
 
 const BeatstoreHTML = `<iframe src="https://player.beatstars.com/?storeId=142410" width="100%" height="800" style="min-width:400px margin: 0 auto;"> -- none -- </iframe>`;
 /*const safeBeatstoreHTML = DOMPurify.sanitize(BeatstoreHTML);*/
@@ -81,40 +83,30 @@ window.addEventListener('scroll', changeOpacity)
     scrollToComponent(ctoRef);
   }
 
-  const BurgerMenu = () => {
-    const [menuIcon, setMenuIcon] = useState(false);
-    
-    useEffect(() => {
-    const HandleResize = () => {
-      if (window.innerWidth < 800) {
-        setMenuIcon(true)
-        document.getElementById('Homepage').style.border = '1px solid green;'
-      } else {
-        setMenuIcon(false)
-      }
+  const [menuIcon, setMenuIcon] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMenuIcon(window.innerWidth <= 900);
     };
   
-    HandleResize();
-    window.addEventListener('resize', HandleResize);
+    handleResize();
+    window.addEventListener('resize', handleResize);
   
     return () => {
-      window.removeEventListener('resize', HandleResize);
+      window.removeEventListener('resize', handleResize);
     };
-  
   }, []);
   
-}
-
-return (
-    <div className="App" >
+  return (
+    <div className="App">
       <div
         className="Homepage"
         style={{
           backgroundImage: `url(${Bussy})`,
-          
         }}
       >
-        <div className={opacity ? 'Navbar Navbar-bg' : 'Navbar'} /*ref={homeRef}*/>
+        <div className={opacity ? 'Navbar Navbar-bg' : 'Navbar'}>
           <div className="Navbar-wrapper">
             <h3 className="Logo">PRODLUNA</h3>
             <ul className="Logo-label">
@@ -123,10 +115,11 @@ return (
             </ul>
 
             <div className="Navbar-wrapper-right">
-              {BurgerMenu ? (
-                  <div className='Burger-menu'>
-                 <FontAwesomeIcon classname='Menu-icon' icon={faAirbnb} />
+              {menuIcon ? (
+                    <div className='Header-link'>
+                    <div className='Menu-icon'><FaBars /></div>
                   </div>
+               
               ) : (
                 <div className='Nav-links'>
                 <ul className="Header-links">
@@ -135,8 +128,8 @@ return (
                   <li className="Credits">Credits</li>
                   <li className="Contact" onClick={ctoScrollToComponent}>Contact</li>
                 </ul>
-                </div>
-              )}   
+              </div>
+              )}  
              </div>
           </div>
 
