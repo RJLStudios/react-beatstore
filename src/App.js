@@ -54,7 +54,7 @@ useEffect(()=>{
 
 const [opacity, setOpacity] = useState(false)
 const changeOpacity = () => {
-  if (window.scrollY >= 90) {
+  if (window.innerWidth >= 700 && window.scrollY >= 90) {
     setOpacity(true)
   } else {
     setOpacity(false)
@@ -117,8 +117,14 @@ window.addEventListener('scroll', changeOpacity)
 
             <div className="Navbar-wrapper-right">
               {menuIcon ? (
-                    <div className='Header-link'>
+                    <div className='Header-link'> 
                     <div className='Menu-icon'><FaBars /></div>
+                    <ul className='Responsive-links'>
+                      <li className='Responsive-li'>CATALOGUE</li>
+                      <li className='Responsive-li'>PRICING</li>
+                      <li className='Responsive-li'>CREDITS</li>
+                      <li className='Responsive-li'>CONTACT</li>
+                    </ul>
                   </div>
                
               ) : (
@@ -145,12 +151,12 @@ window.addEventListener('scroll', changeOpacity)
           <div className="Bio-wrapper">
             <div className="Bio-title">YOUR NEXT HIT STARTS HERE</div>
             <div className="Bio-ul-wrapper">
-              <button className='Homepage-CTO-Btn'>GET IN CONTACT</button>
+              <button className='Homepage-CTO-Btn' onClick={ctoScrollToComponent}>GET IN CONTACT</button>
             </div>
 
               <div className="Sticky-icons">
                 <ul class="Icon-ul">
-                  <a href="#">
+                  <a href="https://soundcloud.com/seijii" target='' >
                     <li className="Soundcloud">
                     <FaSoundcloud />
                     </li>
@@ -160,17 +166,17 @@ window.addEventListener('scroll', changeOpacity)
                       <FaSpotify />
                     </li>
                   </a>
-                  <a href="#">
+                  <a href="https://twitter.com/Mxramasa">
                     <li className="Twitter">
                     <FaTwitter />
                     </li>
                   </a>
-                  <a href="#">
+                  <a href="https://www.youtube.com/channel/UClPPjMSrFzU0fmZND2BL1cA">
                     <li className="Youtube">
                       <FaYoutube />
                     </li>
                   </a>
-                  <a href="#">
+                  <a href="https://www.instagram.com/prod.lunaa/">
                     <li className="Instagram">
                       <FaInstagram />
                     </li>

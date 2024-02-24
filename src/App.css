@@ -91,6 +91,7 @@ margin-left: auto;
   justify-content: end;
 }
 
+
 .Catalogue {
   padding: 0px 15px;
 }
@@ -112,10 +113,35 @@ border: 1px solid red;
 
 .Menu-icon {
   color: white;
+  margin-left: auto;
+  padding: 10px;
 }
 
 .Menu-icon:hover {
   cursor: pointer;
+}
+
+.Responsive-links {
+padding-left: 25px;
+margin: 25vw 0vw;
+}
+
+.Responsive-li {
+  list-style-type: none;
+  font-size: 15px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.Header-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: fixed;
+  inset: 0 0 0 30%;
+  background: hsl(0 0% 100% / 0.1);
+  opacity: 100%;
+  backdrop-filter: blur(1rem);
 }
 
 
