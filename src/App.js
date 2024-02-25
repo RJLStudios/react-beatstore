@@ -84,6 +84,7 @@ window.addEventListener('scroll', changeOpacity)
     scrollToComponent(ctoRef);
   }
 
+  const [isOpen, setIsOpen] = useState(true);
   const [menuIcon, setMenuIcon] = useState(false);
 
   useEffect(() => {
@@ -97,7 +98,12 @@ window.addEventListener('scroll', changeOpacity)
     return () => {
       window.removeEventListener('resize', handleResize);
     };
+
   }, []);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen)
+  }
   
   return (
     <div className="App">
@@ -116,18 +122,20 @@ window.addEventListener('scroll', changeOpacity)
             </ul>
 
             <div className="Navbar-wrapper-right">
-              {menuIcon ? (
-                    <div className='Header-link'> 
-                    <div className='Menu-icon'><FaBars /></div>
+            <div className='Menu-icon' onClick={toggleSidebar}><FaBars /></div>
+              {menuIcon && (
+                    <div className={isOpen ? 'Sidebar Open' : 'Sidebar'}> 
+  
                     <ul className='Responsive-links'>
-                      <li className='Responsive-li'>CATALOGUE</li>
-                      <li className='Responsive-li'>PRICING</li>
+                      <li className='Responsive-li' onClick={catalogScrollToComponent}>CATALOGUE</li>
+                      <li className='Responsive-li' onClick={pricingScrollToComponent}>PRICING</li>
                       <li className='Responsive-li'>CREDITS</li>
-                      <li className='Responsive-li'>CONTACT</li>
+                      <li className='Responsive-li' onClick={ctoScrollToComponent}>CONTACT</li>
                     </ul>
                   </div>
-               
-              ) : (
+              )} 
+
+              {!menuIcon && (
                 <div className='Nav-links'>
                 <ul className="Header-links">
                   <li className="Catalogue" onClick={catalogScrollToComponent}>Beat Catalogue</li>

@@ -41,6 +41,7 @@ body{
  padding: 0px 50px;
  transition: 400ms;
  flex-direction: column;
+ z-index: 2;
 }
 
 .Navbar-bg {
@@ -56,6 +57,7 @@ body{
   padding: 0px;
   flex-direction: row;
   width: 100%;
+
 }
 
 .Nav-links, .Header-links {
@@ -113,8 +115,11 @@ border: 1px solid red;
 
 .Menu-icon {
   color: white;
-  margin-left: auto;
   padding: 10px;
+  right: 10px;
+  top: 10px;
+  position: absolute;
+  z-index: 4;
 }
 
 .Menu-icon:hover {
@@ -133,15 +138,26 @@ margin: 25vw 0vw;
   font-weight: 700;
 }
 
-.Header-link {
+.Sidebar {
+  width: 70vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   position: fixed;
-  inset: 0 0 0 30%;
-  background: hsl(0 0% 100% / 0.1);
-  opacity: 100%;
-  backdrop-filter: blur(1rem);
+  background: hsla(0, 0%, 100%, 0.178);
+  background-color: rgba( 0, 0, 0, 0.8 );
+  transform: translateX(0px);
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease;
+  z-index: 3;
+
+}
+
+.Open {
+  transform: translateX(70vw);
+  backdrop-filter: blur(15px);
 }
 
 
@@ -150,7 +166,7 @@ margin: 25vw 0vw;
 .Homepage {
   padding-top: 75px;
   width: 100%;
-  height: 100vh;
+  
   color: white;
   height: 100%;
   background-size: cover;
@@ -173,6 +189,7 @@ padding: 0px 19vw;
   align-content: center;
   flex-direction: row;
   margin: 100px 0;
+  max-height: fit-content;
 }
 
 .Bio-title {
@@ -194,7 +211,7 @@ padding-left: 10px;
 }
 
 .Homepage-CTO-Btn {
-height: fit-content;
+height: 40px;
 padding: 10px;
 border-radius: none;
 background-color: white;
@@ -411,7 +428,7 @@ color: black;
 .Contact-Div {
   display: flex;
   justify-content: center;
-height: 620px;
+height: 650px;
 width: 100%;
 text-align: start;
 }
@@ -463,6 +480,7 @@ background-color: white;
 width: 100%;
 font-size: 19px;
 padding: 10px 0;
+margin: 15px 0px;
 }
 
 .btn:hover{
@@ -503,8 +521,9 @@ padding: 10px 0;
 .Footer {
   display: flex;
   flex-direction: column;
-  height: 150px;
-  background-color: #282d32;
+  height: 180px;
+  background-color: black;
+  opacity: 92%;
   text-align: center;
   justify-content: space-between;
 }
@@ -529,7 +548,6 @@ padding-bottom: 20px;
 }
 
 .Circle {
-border: 1.75px solid grey;
 border-radius: 50px;
 padding: 10px;
 font-weight: 400;
@@ -543,7 +561,7 @@ font-size: 18px;
   height: 50px;
   color: grey;
   font-weight: 400;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   font-size: 14px;
 }
 
@@ -604,6 +622,8 @@ padding-bottom: 15px;
 
 .Navbar{
   padding: 0em 1.5em;
+  background-color: black;
+  opacity: 92%;
 }
 
 
@@ -621,5 +641,11 @@ border: 2px solid orange;
 visibility: hidden;
 }
 
+}
+
+@media screen and (min-width:900px) {
+.Menu-icon {
+  visibility:hidden;
+}
 }
 
