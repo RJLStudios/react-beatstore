@@ -125,7 +125,6 @@ window.addEventListener('scroll', changeOpacity)
             <div className='Menu-icon' onClick={toggleSidebar}><FaBars /></div>
               {menuIcon && (
                     <div className={isOpen ? 'Sidebar Open' : 'Sidebar'}> 
-  
                     <ul className='Responsive-links'>
                       <li className='Responsive-li' onClick={catalogScrollToComponent}>CATALOGUE</li>
                       <li className='Responsive-li' onClick={pricingScrollToComponent}>PRICING</li>
@@ -252,7 +251,7 @@ window.addEventListener('scroll', changeOpacity)
                   <li className=''>Distribution limit 10,000</li>
                   <li className=''>1,000,000 Audio Streams</li>
                   <li className=''>1 Music Video</li>
-                  <li className=''>Radio Play Rights</li>
+                  <li className=''>High Quality WAV format</li>
                 </ul>
               </div>
 
@@ -274,11 +273,11 @@ window.addEventListener('scroll', changeOpacity)
 
               <div className='Card-Content Card-A'>
                 <ul className='License-li-A'>
-                  <li className=''>Non-Exclusive License</li>
-                  <li className=''>Distribution limit 10,000</li>
-                  <li className=''>1,000,000 Audio Streams</li>
-                  <li className=''>1 Music Video</li>
-                  <li className=''>Radio Play Rights</li>
+                  <li className=''>Exclusive License</li>
+                  <li className=''>Unlimited Distribution limit</li>
+                  <li className=''>Unlimited Streams</li>
+                  <li className=''>Unlimited Music Videos</li>
+                  <li className=''>High Quality WAV format</li>
                 </ul>
               </div>
 
