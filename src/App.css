@@ -160,35 +160,30 @@ margin: 25vw 0vw;
   backdrop-filter: blur(15px);
 }
 
-
-
 /*HOMEPAGE STYLES*/
 .Homepage {
+  display: flex;
+  align-items: center;
   padding-top: 75px;
-  width: 100%;
+  min-height: 100vh;
   color: white;
-  min-height: 50vw;
+ width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .Homepage-wrapper {
 display: flex;
-justify-content: center;
-align-content: center;
 text-align: center;
 width: 100%;
-height: 100%;
 padding: 0px 19vw;
 }
 
 .Bio-wrapper{ 
   width: 100%;
   display: flex;
-  justify-content: center;
   align-content: center;
   flex-direction: row;
-  margin: 27% 0;
   max-height: fit-content;
 }
 
@@ -267,7 +262,7 @@ border: 1px solid green;
   color: white;
   list-style-type: none;
   padding: 4px 0px 7px 0px;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 
