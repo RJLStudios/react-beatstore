@@ -166,9 +166,8 @@ margin: 25vw 0vw;
 .Homepage {
   padding-top: 75px;
   width: 100%;
-  
   color: white;
-  height: 100%;
+  min-height: 50vw;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -179,6 +178,7 @@ justify-content: center;
 align-content: center;
 text-align: center;
 width: 100%;
+height: 100%;
 padding: 0px 19vw;
 }
 
@@ -188,7 +188,7 @@ padding: 0px 19vw;
   justify-content: center;
   align-content: center;
   flex-direction: row;
-  margin: 100px 0;
+  margin: 27% 0;
   max-height: fit-content;
 }
 
@@ -647,5 +647,15 @@ visibility: hidden;
 .Menu-icon {
   visibility:hidden;
 }
+
+.btn:hover{
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  width: 100%;
+  font-size: 19px;
+  padding: 10px 0;
+  }
+
 }
 
