@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-beatstore/static/css/main.6ca904a8.css",
+    "main.css": "/react-beatstore/static/css/main.ae4ea0f8.css",
     "main.js": "/react-beatstore/static/js/main.52442222.js",
     "static/media/Bussy.jpg": "/react-beatstore/static/media/Bussy.d1f9245d4c4cfa608ba2.jpg",
     "static/media/QUATTROCENTOSANS-BOLD.TTF": "/react-beatstore/static/media/QUATTROCENTOSANS-BOLD.7b057d60a5d6d316ce3b.TTF",
     "static/media/QuattrocentoSans-Regular.ttf": "/react-beatstore/static/media/QuattrocentoSans-Regular.5293b4c9e114a999cd53.ttf",
     "index.html": "/react-beatstore/index.html",
-    "main.6ca904a8.css.map": "/react-beatstore/static/css/main.6ca904a8.css.map",
+    "main.ae4ea0f8.css.map": "/react-beatstore/static/css/main.ae4ea0f8.css.map",
     "main.52442222.js.map": "/react-beatstore/static/js/main.52442222.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ca904a8.css",
+    "static/css/main.ae4ea0f8.css",
     "static/js/main.52442222.js"
   ]
 }
